@@ -2,6 +2,7 @@
 
 const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
+const searchInput = document.querySelector('.input-country');
 
 // Function to render Country
 const renderCountry = function (data) {    
@@ -69,4 +70,7 @@ const getCountryData = function (country) {
 
 }
 
-getCountryData('haiti');
+btn.addEventListener('click', function () {
+    countriesContainer.innerHTML = '';
+    getCountryData(searchInput.value);
+})

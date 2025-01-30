@@ -14,10 +14,11 @@ body {
   color: #555;
   background-color: #f7f7f7;
   min-height: 100vh;
-
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  margin: 0;
 }
 
 .container {
@@ -27,22 +28,20 @@ body {
 }
 
 .countries {
-  /* margin-bottom: 8rem; */
   display: flex;
-
   font-size: 2rem;
   opacity: 0;
   transition: opacity 1s;
 }
 
 .country {
+  /* overflow: hidden; */
   background-color: #fff;
   box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
   font-size: 1.8rem;
   width: 30rem;
-  border-radius: 0.7rem;
   margin: 0 3rem;
-  /* overflow: hidden; */
+  border-radius: 0.7rem;
 }
 
 .neighbour::before {
@@ -98,14 +97,30 @@ body {
   font-size: 2.4rem;
 }
 
-.btn-country {
+.general{
   border: none;
   font-size: 2rem;
-  padding: 2rem 5rem;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+}
+.input-country{
+  flex: 1;
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  font-size: 2rem;
   border-radius: 0.7rem;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+}
+
+.btn-country {
+  flex-shrink: 0;
+  padding: 10px 20px;
+  font-size: 2rem;
   color: white;
-  background-color: orangered;
+  background-color: rgb(60, 63, 39);
   cursor: pointer;
+  border-radius: 0.7rem;
 }
 
 .images {
